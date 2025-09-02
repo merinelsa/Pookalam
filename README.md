@@ -7,8 +7,6 @@ A vibrant project that recreates the traditional Onam Pookalam with code, blendi
 .This project blends art, culture, and code by generating a vibrant and symmetrical Pookalam design programmatically.
 .Perfect for showcasing creativity with JavaScript and computer graphics.
 
-* Preview
-
 * Features
 
 . Concentric circular layers with traditional Onam flower colors
