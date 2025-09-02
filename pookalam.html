@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Onam Pookalam</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #fff3d4, #ffe5b4, #fff3d4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+<script>
+function setup() {
+  createCanvas(700, 700);
+  angleMode(DEGREES);
+  noLoop();
+}
+
+function draw() {
+  background(255, 248, 231, 180);
+  translate(width/2, height/2);
+
+  const palette = [
+    '#D62828', // hibiscus red
+    '#F77F00', // warm orange
+    '#FFB703', // golden marigold
+    '#2E933C', // leaf green
+    '#E6399B', // pink lotus (not used now for star)
+    '#FFD166', // soft yellow
+    '#F4A300', // saffron orange
+    '#FFE066'  // pale yellow
+  ];
+
+  drawTriangleRing(280, 36, 100, palette[3], palette[2]);
+
+  noStroke();
+  fill(palette[0]); circle(0,0,540);
+  fill(palette[1]); circle(0,0,480);
+  fill(palette[6]); circle(0,0,420);
+
+  drawPetalRing(220, 18, palette[2], 0, 120, 60);
+
+  // star in red instead of pink
+  drawStar(0, 0, 200, 100, 24, palette[0]); 
+
+  drawPetalRing(130, 12, palette[3], 15, 70, 35);
+
+  noStroke();
+  fill(palette[5]); circle(0,0,150);
+
+  drawPetalRing(70, 10, palette[1], 0, 50, 20);
+
+  fill(palette[0]); circle(0,0,50);
+  fill('#FFD700'); circle(0,0,24);
+}
+
+function drawPetalRing(radius, count, c, rotation, length, width) {
+  for (let i=0; i<count; i++) {
+    push();
+    rotate(rotation + i * 360/count);
+    translate(radius, 0);
+    noStroke(); 
+    fill(c);
+    beginShape();
+    vertex(0, 0);
+    bezierVertex(length*0.3, -width*0.6,
+                 length*0.9, -width*0.6,
+                 length, 0);
+    bezierVertex(length*0.9, width*0.6,
+                 length*0.3, width*0.6,
+                 0, 0);
+    endShape(CLOSE);
+    pop();
+  }
+}
+
+function drawStar(x, y, radius1, radius2, npoints, c) {
+  let angle = 360 / npoints;
+  let halfAngle = angle / 2;
+  fill(c);
+  noStroke();
+  beginShape();
+  for (let a = 0; a < 360; a += angle) {
+    let sx = x + cos(a) * radius1;
+    let sy = y + sin(a) * radius1;
+    vertex(sx, sy);
+    sx = x + cos(a + halfAngle) * radius2;
+    sy = y + sin(a + halfAngle) * radius2;
+    vertex(sx, sy);
+  }
+  endShape(CLOSE);
+}
+
+function drawTriangleRing(radius, count, size, c1, c2) {
+  for (let i = 0; i < count; i++) {
+    push();
+    rotate(i * 360/count);
+    translate(radius, 0);
+    noStroke();
+    fill(i % 2 === 0 ? c1 : c2);
+    beginShape();
+    vertex(-size/2, 0);
+    vertex(size/2, 0);
+    vertex(0, -size);
+    endShape(CLOSE);
+    pop();
+  }
+}
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Onam Pookalam</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #fff3d4, #ffe5b4, #fff3d4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+<script>
+function setup() {
+  createCanvas(700, 700);
+  angleMode(DEGREES);
+  noLoop();
+}
+
+function draw() {
+  background(255, 248, 231, 180);
+  translate(width/2, height/2);
+
+  const palette = [
+    '#D62828', // hibiscus red
+    '#F77F00', // warm orange
+    '#FFB703', // golden marigold
+    '#2E933C', // leaf green
+    '#E6399B', // pink lotus (not used now for star)
+    '#FFD166', // soft yellow
+    '#F4A300', // saffron orange
+    '#FFE066'  // pale yellow
+  ];
+
+  drawTriangleRing(280, 36, 100, palette[3], palette[2]);
+
+  noStroke();
+  fill(palette[0]); circle(0,0,540);
+  fill(palette[1]); circle(0,0,480);
+  fill(palette[6]); circle(0,0,420);
+
+  drawPetalRing(220, 18, palette[2], 0, 120, 60);
+
+  // star in red instead of pink
+  drawStar(0, 0, 200, 100, 24, palette[0]); 
+
+  drawPetalRing(130, 12, palette[3], 15, 70, 35);
+
+  noStroke();
+  fill(palette[5]); circle(0,0,150);
+
+  drawPetalRing(70, 10, palette[1], 0, 50, 20);
+
+  fill(palette[0]); circle(0,0,50);
+  fill('#FFD700'); circle(0,0,24);
+}
+
+function drawPetalRing(radius, count, c, rotation, length, width) {
+  for (let i=0; i<count; i++) {
+    push();
+    rotate(rotation + i * 360/count);
+    translate(radius, 0);
+    noStroke(); 
+    fill(c);
+    beginShape();
+    vertex(0, 0);
+    bezierVertex(length*0.3, -width*0.6,
+                 length*0.9, -width*0.6,
+                 length, 0);
+    bezierVertex(length*0.9, width*0.6,
+                 length*0.3, width*0.6,
+                 0, 0);
+    endShape(CLOSE);
+    pop();
+  }
+}
+
+function drawStar(x, y, radius1, radius2, npoints, c) {
+  let angle = 360 / npoints;
+  let halfAngle = angle / 2;
+  fill(c);
+  noStroke();
+  beginShape();
+  for (let a = 0; a < 360; a += angle) {
+    let sx = x + cos(a) * radius1;
+    let sy = y + sin(a) * radius1;
+    vertex(sx, sy);
+    sx = x + cos(a + halfAngle) * radius2;
+    sy = y + sin(a + halfAngle) * radius2;
+    vertex(sx, sy);
+  }
+  endShape(CLOSE);
+}
+
+function drawTriangleRing(radius, count, size, c1, c2) {
+  for (let i = 0; i < count; i++) {
+    push();
+    rotate(i * 360/count);
+    translate(radius, 0);
+    noStroke();
+    fill(i % 2 === 0 ? c1 : c2);
+    beginShape();
+    vertex(-size/2, 0);
+    vertex(size/2, 0);
+    vertex(0, -size);
+    endShape(CLOSE);
+    pop();
+  }
+}
+</script>
+</body>
+</html>
