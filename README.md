@@ -1,19 +1,15 @@
 # Pookalam
 A vibrant project that recreates the traditional Onam Pookalam with code, blending culture and creativity.
 
-🌸 Onam Pookalam – Virtual Flower Carpet
+* Onam Pookalam – Virtual Flower Carpet
 
-A digital recreation of the traditional Onam Pookalam (flower carpet) using p5.js.
-This project blends art, culture, and code by generating a vibrant and symmetrical Pookalam design programmatically.
+.A digital recreation of the traditional Onam Pookalam (flower carpet) using p5.js.
+.This project blends art, culture, and code by generating a vibrant and symmetrical Pookalam design programmatically.
+.Perfect for showcasing creativity with JavaScript and computer graphics.
 
- Perfect for showcasing creativity with JavaScript and computer graphics.
+* Preview
 
- Preview
-
-
-(Add a screenshot of your design here – it makes your repo instantly more appealing!)
-
-🚀 Features
+* Features
 
 . Concentric circular layers with traditional Onam flower colors
 
@@ -27,20 +23,20 @@ This project blends art, culture, and code by generating a vibrant and symmetric
 
 . Tech Stack
 
-Language: JavaScript
+*Language: JavaScript
 
-Library: p5.js
+*Library: p5.js
 
-Tools: HTML, CSS
+*Tools: HTML, CSS
 
-📂 Project Structure
-📁 Onam-Pookalam
- ┣ 📄 index.html      # Main HTML file
- ┣ 📄 script.js       # p5.js drawing logic
- ┣ 📄 style.css       # Styling (gradient background)
- ┗ 📄 README.md       # Project documentation
+*Project Structure
+* Onam-Pookalam
+  .index.html      # Main HTML file
+  .script.js       # p5.js drawing logic
+  .style.css       # Styling (gradient background)
+  .README.md       # Project documentation
 
- How to Run
+* How to Run
 
 Clone this repo
 
